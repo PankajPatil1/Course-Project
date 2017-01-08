@@ -1,5 +1,5 @@
- ## Final Project of the course "Getting and Cleaning Data"
- ### INTRODUCTION
+ # Final Project of the course "Getting and Cleaning Data"
+ # INTRODUCTION
 The script run_analysis.R does the following tasks:
 * Reads an untidy data set as provided at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 * The script reads all the important files like activity_labels.txt,training.txt,test.txt etc
@@ -16,6 +16,5 @@ The script run_analysis.R does the following tasks:
 * The column names are set according to their name in features 
 * The mean is calculated for entries of same person and same activity
 * The data is written into a text file after removing quotes and rownames
-
 ### LABELS
 * The variabl
