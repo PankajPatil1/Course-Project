@@ -1,6 +1,7 @@
- # Final Project of the course "Getting and Cleaning Data"
- # INTRODUCTION
-The script run_analysis.R does the following tasks:
+# Introduction
+
+The script `run_analysis.R`performs the 5 steps described in the course project's definition.
+
 * Reads an untidy data set as provided at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 * The script reads all the important files like activity_labels.txt,training.txt,test.txt etc
 * This step merges the data collected in step 1 
@@ -16,5 +17,12 @@ The script run_analysis.R does the following tasks:
 * The column names are set according to their name in features 
 * The mean is calculated for entries of same person and same activity
 * The data is written into a text file after removing quotes and rownames
-### LABELS
-* The variabl
+
+# Variables
+
+* `x_train`, `y_train`, `x_test`, `y_test`, `subject_train` and `subject_test` contain the data from the downloaded files.
+* `all_data`, `all_labels` and `all_subjects` merge the previous datasets to further analysis.
+* `features` contains the correct names for the `all_data` dataset, which are applied to the column names stored in `features_colno`, a numeric vector used to extract the desired data.
+* A similar approach is taken with activity names through the `activity_labels` variable.
+* `all_data` is added with column names
+* Finally, `averages_data` contains the relevant averages which will be later stored in a `.txt` file. `ddply()` from the plyr package is used to apply `colMeans()` and ease the development.
